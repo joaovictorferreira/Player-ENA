@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c2800080e444d58b3eccdf2e1dd265, type: 3}
+  m_Name: Attention Marker Floor
+  m_EditorClassIdentifier: 
+  id: AttentionMarkerFloor
+  propName:
+    m_TableReference:
+      m_TableCollectionName: GUID:644f6e3b1578040bfb6b0236fb79594f
+    m_TableEntryReference:
+      m_KeyId: 91949042932637696
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  prefab: {fileID: 2439287608502440879, guid: acdef58f089924326a6ce3de42360cc6, type: 3}
+  references:
+    version: 2
+    RefIds: []
