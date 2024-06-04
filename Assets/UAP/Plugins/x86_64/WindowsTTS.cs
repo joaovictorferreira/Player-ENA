@@ -6,19 +6,19 @@ public class WindowsTTS : MonoBehaviour
 {
 #if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
 	[DllImport("WindowsTTS")]
-	public static extern void Initialize();
+	public static extern void initSpeech(); //Initialize();
 	[DllImport("WindowsTTS")]
-	public static extern void DestroySpeech();
+	public static extern void destroySpeech(); //DestroySpeech();
 	[DllImport("WindowsTTS")]
-	public static extern void StopSpeech();
+	public static extern void clearSpeechQueue(); //StopSpeech();
 	[DllImport("WindowsTTS")]
-	public static extern void AddToSpeechQueue(string s);
+	public static extern void addToSpeechQueue(string s); //AddToSpeechQueue(string s);
 	//[DllImport("WindowsTTS")]
 	//public static extern void SetVolume(int volume);
 	//[DllImport("WindowsTTS")]
 	//public static extern void SetRate(int rate);
 	[DllImport("WindowsTTS")]
-	public static extern bool IsVoiceSpeaking();
+	public static extern bool isSpeaking(); //IsVoiceSpeaking();
 
 	[DllImport("nvdaControllerClient")]
 	internal static extern int nvdaController_testIfRunning();
@@ -59,7 +59,7 @@ public class WindowsTTS : MonoBehaviour
 		if (instance == null)
 		{
 			instance = this;
-			Initialize();
+			initSpeech(); // Initialize();
 
 			// No longer needed, because this is now a child of the Accessibility Manager, which is already set to DontDestroyOnLoad
 			//DontDestroyOnLoad(gameObject);
@@ -88,7 +88,7 @@ public class WindowsTTS : MonoBehaviour
 		}
 		else
 		{
-			AddToSpeechQueue(msg);
+			addToSpeechQueue(msg); //AddToSpeechQueue(msg);
 		}
 	}
 
@@ -103,7 +103,7 @@ public class WindowsTTS : MonoBehaviour
 		}
 		else
 		{
-			StopSpeech();
+			clearSpeechQueue(); //StopSpeech();
 		}
 	}
 
@@ -121,7 +121,7 @@ public class WindowsTTS : MonoBehaviour
 		}
 		else
 		{
-			return IsVoiceSpeaking();
+			return isSpeaking(); //IsVoiceSpeaking();
 		}
 	}
 
@@ -155,7 +155,7 @@ public class WindowsTTS : MonoBehaviour
 	{
 		if (instance == this)
 		{
-			DestroySpeech();
+			destroySpeech(); //DestroySpeech();
 			instance = null;
 		}
 	}
