@@ -111,7 +111,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 66737748847878144
-    m_Localized: Load...
+    m_Localized: Load
     m_Metadata:
       m_Items: []
   - m_Id: 66738516170629120
@@ -120,6 +120,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 66739259099308032
     m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 290214294972518400
+    m_Localized: Upload
+    m_Metadata:
+      m_Items: []
+  - m_Id: 290216776113049600
+    m_Localized: Delete Map
+    m_Metadata:
+      m_Items: []
+  - m_Id: 290217325222940672
+    m_Localized: Logout
+    m_Metadata:
+      m_Items: []
+  - m_Id: 291259716486811648
+    m_Localized: Add Starting Point
+    m_Metadata:
+      m_Items: []
+  - m_Id: 291260568643555328
+    m_Localized: Goal Zone
     m_Metadata:
       m_Items: []
   references:

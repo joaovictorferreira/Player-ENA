@@ -15,108 +15,128 @@ MonoBehaviour:
   m_TableCollectionName: UI
   m_TableCollectionNameGuidString: c67b344e18aef4cc789e84bd32223d93
   m_Entries:
-  - m_Id: 273052327936
-    m_Key: Key_Gyroscope
-    m_Metadata:
-      m_Items: []
-  - m_Id: 458667057152
-    m_Key: Key_VRGoggles
-    m_Metadata:
-      m_Items: []
-  - m_Id: 674258477056
-    m_Key: Key_VanishElements
-    m_Metadata:
-      m_Items: []
-  - m_Id: 877900324864
-    m_Key: Key_Map
-    m_Metadata:
-      m_Items: []
-  - m_Id: 988353126400
-    m_Key: Key_Vibration
-    m_Metadata:
-      m_Items: []
-  - m_Id: 47543672102912
-    m_Key: Key_FindXML
-    m_Metadata:
-      m_Items: []
-  - m_Id: 48811320795136
-    m_Key: Key_InformName
-    m_Metadata:
-      m_Items: []
-  - m_Id: 737207437484032
-    m_Key: Key_ExitMessage
-    m_Metadata:
-      m_Items: []
-  - m_Id: 739165586055168
-    m_Key: Key_Yes
-    m_Metadata:
-      m_Items: []
-  - m_Id: 739204345618432
-    m_Key: Key_No
-    m_Metadata:
-      m_Items: []
-  - m_Id: 778169282977792
-    m_Key: Key_FileBrowser
+  - m_Id: 27525180141068288
+    m_Key: Key_AllFiles
     m_Metadata:
       m_Items: []
   - m_Id: 6087802545496064
     m_Key: Key_AppTitle
     m_Metadata:
       m_Items: []
-  - m_Id: 27469841911767040
-    m_Key: Key_Search
-    m_Metadata:
-      m_Items: []
-  - m_Id: 27475176315674624
-    m_Key: Key_HiddenFiles
-    m_Metadata:
-      m_Items: []
   - m_Id: 27482274097258496
     m_Key: Key_Cancel
-    m_Metadata:
-      m_Items: []
-  - m_Id: 27484323329335296
-    m_Key: Key_OK
-    m_Metadata:
-      m_Items: []
-  - m_Id: 27484771784318976
-    m_Key: Key_Filename
-    m_Metadata:
-      m_Items: []
-  - m_Id: 27525180141068288
-    m_Key: Key_AllFiles
-    m_Metadata:
-      m_Items: []
-  - m_Id: 27528107102560256
-    m_Key: Key_OptionA
-    m_Metadata:
-      m_Items: []
-  - m_Id: 66735710219001856
-    m_Key: Key_Enter
-    m_Metadata:
-      m_Items: []
-  - m_Id: 66736026033315840
-    m_Key: Key_Password
-    m_Metadata:
-      m_Items: []
-  - m_Id: 66736594495725568
-    m_Key: Key_Signup
-    m_Metadata:
-      m_Items: []
-  - m_Id: 66737193509445632
-    m_Key: Key_Settings
-    m_Metadata:
-      m_Items: []
-  - m_Id: 66737748847878144
-    m_Key: Key_LoadMap
     m_Metadata:
       m_Items: []
   - m_Id: 66738516170629120
     m_Key: Key_Confirm
     m_Metadata:
       m_Items: []
+  - m_Id: 66735710219001856
+    m_Key: Key_Enter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 737207437484032
+    m_Key: Key_ExitMessage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 778169282977792
+    m_Key: Key_FileBrowser
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27484771784318976
+    m_Key: Key_Filename
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47543672102912
+    m_Key: Key_FindXML
+    m_Metadata:
+      m_Items: []
+  - m_Id: 273052327936
+    m_Key: Key_Gyroscope
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27475176315674624
+    m_Key: Key_HiddenFiles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48811320795136
+    m_Key: Key_InformName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66737748847878144
+    m_Key: Key_LoadMap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 877900324864
+    m_Key: Key_Map
+    m_Metadata:
+      m_Items: []
+  - m_Id: 739204345618432
+    m_Key: Key_No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27484323329335296
+    m_Key: Key_OK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27528107102560256
+    m_Key: Key_OptionA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66736026033315840
+    m_Key: Key_Password
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27469841911767040
+    m_Key: Key_Search
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66737193509445632
+    m_Key: Key_Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66736594495725568
+    m_Key: Key_Signup
+    m_Metadata:
+      m_Items: []
   - m_Id: 66739259099308032
     m_Key: Key_Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 674258477056
+    m_Key: Key_VanishElements
+    m_Metadata:
+      m_Items: []
+  - m_Id: 988353126400
+    m_Key: Key_Vibration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 458667057152
+    m_Key: Key_VRGoggles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 739165586055168
+    m_Key: Key_Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 290214294972518400
+    m_Key: Key_Upload
+    m_Metadata:
+      m_Items: []
+  - m_Id: 290216776113049600
+    m_Key: Key_Delete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 290217325222940672
+    m_Key: Key_Logout
+    m_Metadata:
+      m_Items: []
+  - m_Id: 291259716486811648
+    m_Key: Key_StartingPoint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 291260568643555328
+    m_Key: Key_GoalZone
     m_Metadata:
       m_Items: []
   m_Metadata:
