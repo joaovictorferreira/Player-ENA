@@ -18,12 +18,19 @@ namespace ENA.Services
         public bool ObjectiveZoneEnabled;
         public bool VREnabled;
         public bool VibrationEnabled;
+        public float AccessibilitySpeechRate;
         #endregion
         #region Methods
         private void GetBool(string key, out bool value)
         {
             int rawValue = PlayerPrefs.GetInt(key);
             value = Convert.ToBoolean(rawValue);
+        }
+
+        private void GetFloat(string key, out float value)
+        {
+            int rawValue = PlayerPrefs.GetInt(key);
+            value = rawValue;
         }
 
         public void Load()
@@ -35,6 +42,7 @@ namespace ENA.Services
             GetBool(nameof(ObjectiveZoneEnabled), out ObjectiveZoneEnabled);
             GetBool(nameof(VREnabled), out VREnabled);
             GetBool(nameof(VibrationEnabled), out VibrationEnabled);
+            GetFloat(nameof(AccessibilitySpeechRate), out AccessibilitySpeechRate);
         }
 
         public void Reset()
@@ -46,12 +54,19 @@ namespace ENA.Services
             ResetKey(nameof(ObjectiveZoneEnabled), out ObjectiveZoneEnabled);
             ResetKey(nameof(VREnabled), out VREnabled);
             ResetKey(nameof(VibrationEnabled), out VibrationEnabled);
+            ResetKey(nameof(AccessibilitySpeechRate), out AccessibilitySpeechRate);
         }
 
         private void ResetKey(string key, out bool value)
         {
             PlayerPrefs.DeleteKey(key);
             value = false;
+        }
+
+        private void ResetKey(string key, out float value)
+        {
+            PlayerPrefs.DeleteKey(key);
+            value = 0;
         }
 
         public void Save()
@@ -63,6 +78,7 @@ namespace ENA.Services
             SetBool(nameof(ObjectiveZoneEnabled), in ObjectiveZoneEnabled);
             SetBool(nameof(VREnabled), in VREnabled);
             SetBool(nameof(VibrationEnabled), in VibrationEnabled);
+            SetFloat(nameof(AccessibilitySpeechRate), in AccessibilitySpeechRate);
         }
 
         public void SetAcessibility(bool value)
@@ -71,6 +87,12 @@ namespace ENA.Services
         }
 
         private void SetBool(string key, in bool value)
+        {
+            int rawValue = Convert.ToInt32(value);
+            PlayerPrefs.SetInt(key, rawValue);
+        }
+
+        private void SetFloat(string key, in float value)
         {
             int rawValue = Convert.ToInt32(value);
             PlayerPrefs.SetInt(key, rawValue);
@@ -109,6 +131,11 @@ namespace ENA.Services
         public void SetObjectiveZone(bool value)
         {
             ObjectiveZoneEnabled = value;
+        }
+
+        public void SetAccessibilitySpeechRate(float value)
+        {
+            AccessibilitySpeechRate = value;
         }
         #endregion
     }

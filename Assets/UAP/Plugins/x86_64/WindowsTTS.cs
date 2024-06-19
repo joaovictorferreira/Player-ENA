@@ -15,8 +15,8 @@ public class WindowsTTS : MonoBehaviour
 	public static extern void addToSpeechQueue(string s); //AddToSpeechQueue(string s);
 	//[DllImport("WindowsTTS")]
 	//public static extern void SetVolume(int volume);
-	//[DllImport("WindowsTTS")]
-	//public static extern void SetRate(int rate);
+	[DllImport("WindowsTTS")]
+	public static extern void setRate(int rate); //SetRate(int rate);
 	[DllImport("WindowsTTS")]
 	public static extern bool isSpeaking(); //IsVoiceSpeaking();
 
@@ -64,10 +64,13 @@ public class WindowsTTS : MonoBehaviour
 			// No longer needed, because this is now a child of the Accessibility Manager, which is already set to DontDestroyOnLoad
 			//DontDestroyOnLoad(gameObject);
 		}
-		else
+		else if (instance != null && instance != this)
 		{
-			Debug.LogError("[Accessibility] Trying to create another Windows TTS instance, when there already is one.");
-			DestroyImmediate(gameObject);
+			Destroy(this.gameObject);
+    
+			// Debug.LogError("[Accessibility] Trying to create another Windows TTS instance, when there already is one.");
+			// DestroyImmediate(gameObject);
+			
 			return;
 		}
 
@@ -141,13 +144,13 @@ public class WindowsTTS : MonoBehaviour
 		SetVolume(volume);
 	}
 
+*/
 	//////////////////////////////////////////////////////////////////////////
 
 	public static void SetSpeechRate(int rate)
 	{
-		SetRate(rate);
+		setRate(rate); // SetRate(rate);
 	}
-*/
 	
 	//////////////////////////////////////////////////////////////////////////
 

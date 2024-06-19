@@ -83,8 +83,8 @@ public class AndroidTTS : MonoBehaviour
 		// Safety
 		if (speechRate < 1)
 			speechRate = 1;
-		if (speechRate > 100)
-			speechRate = 100;
+		if (speechRate > 1000)
+			speechRate = 1000;
 
 #if UNITY_ANDROID && !UNITY_EDITOR
 		float adjustedSpeechRate = (speechRate + 50) / 50.0f;

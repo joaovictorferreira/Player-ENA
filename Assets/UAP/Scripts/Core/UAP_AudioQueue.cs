@@ -27,6 +27,7 @@ public class UAP_AudioQueue : MonoBehaviour
 	/// Speech Rate in the range of 1..100, not supported on all platforms.
 	/// </summary>
 	private int m_SpeechRate = 65;
+	private int c_SpeechRate = 65;
 
 	private AudioSource m_AudioPlayer = null;
 	private Queue<SAudioEntry> m_AudioQueue = new Queue<SAudioEntry>();
@@ -231,6 +232,16 @@ public class UAP_AudioQueue : MonoBehaviour
 			WindowsTTSObj.AddComponent<WindowsTTS>();
 			WindowsTTSObj.transform.SetParent(this.transform, false);
 		}
+		if (m_SpeechRate != c_SpeechRate) 
+		{
+			Destroy(WindowsTTS.instance.gameObject);
+
+			GameObject WindowsTTSObj = new GameObject("Windows TTS");
+			WindowsTTSObj.AddComponent<WindowsTTS>();
+			WindowsTTSObj.transform.SetParent(this.transform, false);
+
+			c_SpeechRate = m_SpeechRate;
+		}
 #endif
 	}
 
@@ -238,7 +249,7 @@ public class UAP_AudioQueue : MonoBehaviour
 
 	public void Initialize()
 	{
-		m_SpeechRate = PlayerPrefs.GetInt("Accessibility_Speech_Rate", 50);
+		m_SpeechRate = PlayerPrefs.GetInt("AccessibilitySpeechRate", 50);
 
 		if (m_AudioPlayer == null)
 			m_AudioPlayer = GetComponent<AudioSource>();
@@ -328,6 +339,8 @@ public class UAP_AudioQueue : MonoBehaviour
 
 	void TTS_Speak(string text, bool allowVoiceOver = true)
 	{
+		m_SpeechRate = PlayerPrefs.GetInt("AccessibilitySpeechRate", 50);
+
 		if (UAP_CustomTTS.IsInitialized() == UAP_CustomTTS.TTSInitializationState.NotInitialized)
 		{
 #if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
@@ -335,6 +348,7 @@ public class UAP_AudioQueue : MonoBehaviour
 			{
 				InitializeWindowsTTS();
 				//Debug.Log("Speaking: " + text);
+				WindowsTTS.SetSpeechRate(m_SpeechRate);
 				WindowsTTS.Speak(text);
 			}
 #elif (UNITY_STANDALONE_OSX || UNITY_EDITOR) && !UNITY_WEBPLAYER
@@ -619,8 +633,8 @@ public class UAP_AudioQueue : MonoBehaviour
 		m_SpeechRate = speechRate;
 		if (m_SpeechRate < 1)
 			m_SpeechRate = 1;
-		if (m_SpeechRate > 100)
-			m_SpeechRate = 100;
+		if (m_SpeechRate > 1000)
+			m_SpeechRate = 1000;
 
 		PlayerPrefs.SetInt("Accessibility_Speech_Rate", m_SpeechRate);
 		PlayerPrefs.Save();
