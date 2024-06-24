@@ -42,8 +42,7 @@ MonoBehaviour:
       - rid: 7805073818938769411
   - m_Id: 33481358989844480
     m_Localized: "Voc\xEA est\xE1 entrando em ambiente com {0} que podem ser identificados
-      pelos seus sons. Seu objetivo \xE9 encontrar {0} nessa ordem e depois retornar
-      para o ponto inicial."
+      pelos seus sons. Seu objetivo \xE9 encontrar {0} nessa ordem"
     m_Metadata:
       m_Items:
       - rid: 7805073818938769411
@@ -54,6 +53,10 @@ MonoBehaviour:
       - rid: 7805073818938769411
   - m_Id: 38578828480602112
     m_Localized: o ponto inicial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 268959075429240832
+    m_Localized: ' e depois retornar para o ponto inicial.'
     m_Metadata:
       m_Items: []
   references:

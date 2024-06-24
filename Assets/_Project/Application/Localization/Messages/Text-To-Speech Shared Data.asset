@@ -47,6 +47,10 @@ MonoBehaviour:
     m_Key: Hint
     m_Metadata:
       m_Items: []
+  - m_Id: 268959075429240832
+    m_Key: ReturnToStartingPoint
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

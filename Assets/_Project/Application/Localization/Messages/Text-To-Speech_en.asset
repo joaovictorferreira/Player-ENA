@@ -42,8 +42,7 @@ MonoBehaviour:
       - rid: 7805073818938769412
   - m_Id: 33481358989844480
     m_Localized: You are entering a room with {0} which you can identify by their
-      sounds. Your goal is to find {0} in that order then, you must return to the
-      starting point
+      sounds. Your goal is to find {0} in that order
     m_Metadata:
       m_Items:
       - rid: 7805073818938769412
@@ -54,6 +53,10 @@ MonoBehaviour:
       - rid: 7805073818938769412
   - m_Id: 38578828480602112
     m_Localized: the starting point
+    m_Metadata:
+      m_Items: []
+  - m_Id: 268959075429240832
+    m_Localized: then you must return to the starting point.
     m_Metadata:
       m_Items: []
   references:

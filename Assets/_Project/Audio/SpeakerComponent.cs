@@ -13,11 +13,13 @@ namespace ENA.Audio
         public const float WaitingTimeForAudio = 5;
         #endregion
         #region Variables
+        [SerializeField] ObjectiveComponent startingPoint;
         [SerializeField] LocalizedString ActivityFailMessage;
         [SerializeField] LocalizedString ActivitySuccessMessage;
         [SerializeField] LocalizedString CollisionMessage;
         [SerializeField] LocalizedString InitialSpotMessage;
         [SerializeField] LocalizedString IntroMessage;
+        [SerializeField] LocalizedString ReturnToStartingPoint;
         [SerializeField] LocalizedString LoadingMessage;
         [SerializeField] LocalizedString ObjectiveFoundMessage;
         [SerializeField] LocalizedString HintMessage;
@@ -71,10 +73,14 @@ namespace ENA.Audio
             if (objectives == null || objectives.Count == 0) return;
 
             string text = "";
-            objectives.RemoveAt(objectives.Count - 1);
+            string supplementaryText = "";
+            if (objectives.Contains(startingPoint.name)) {
+                objectives.RemoveAt(objectives.Count - 1);
+                supplementaryText = ReturnToStartingPoint.GetLocalizedString();
+            }
             foreach(var objective in objectives) text += $" {objective},";
 
-            Speak(IntroMessage.GetLocalizedString(text));
+            Speak(IntroMessage.GetLocalizedString(text) + supplementaryText);
         }
 
         public void SpeakLoading()
@@ -89,13 +95,14 @@ namespace ENA.Audio
             switch (list.AmountLeft) {
                 case 0:
                     return;
-                case 1:
-                    currentObjective = current.ExtractObjectiveName();
-                    nextObjective = default;
-                    break;
+                // case 1:
+                //     currentObjective = current.ExtractObjectiveName();
+                //     nextObjective = default;
+                //     break;
                 default:
                     currentObjective = current.ExtractObjectiveName();
                     nextObjective = list.NextObjective.ExtractObjectiveName();
+                    if (nextObjective == "Objective") nextObjective = default;
                     break;
             }
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17279522, g: 0.21590492, b: 0.2978543, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276813, g: 0.21589185, b: 0.29782563, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3353,6 +3353,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Speaker
+      objectReference: {fileID: 0}
+    - target: {fileID: 4295016197135018178, guid: 2f7e9117c3c964b028aa918531b6e560,
+        type: 3}
+      propertyPath: startingPoint
+      value: 
+      objectReference: {fileID: 7461104876474046322}
+    - target: {fileID: 4295016197135018178, guid: 2f7e9117c3c964b028aa918531b6e560,
+        type: 3}
+      propertyPath: ReturnToStartingPoint.m_TableEntryReference.m_KeyId
+      value: 268959075429240832
+      objectReference: {fileID: 0}
+    - target: {fileID: 4295016197135018178, guid: 2f7e9117c3c964b028aa918531b6e560,
+        type: 3}
+      propertyPath: ReturnToStartingPoint.m_TableReference.m_TableCollectionName
+      value: GUID:327c3a94f213141e7ad7620e5e7f75cf
       objectReference: {fileID: 0}
     - target: {fileID: 6838895354150321347, guid: 2f7e9117c3c964b028aa918531b6e560,
         type: 3}
