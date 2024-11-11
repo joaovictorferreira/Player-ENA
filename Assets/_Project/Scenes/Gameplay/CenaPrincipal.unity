@@ -1841,7 +1841,7 @@ MonoBehaviour:
     userID: 0
   enableAPI: 0
   devMode: 0
-  playerTransform: {fileID: 4189089773127281}
+  playerTransform: {fileID: 4856322248418733}
   objectiveList: {fileID: 11400000, guid: 843bebc1324894a878042de8877f883c, type: 2}
   profile: {fileID: 11400000, guid: 1e17591df00384726812e8136a3a3c25, type: 2}
   OnSessionStarted:
@@ -2286,7 +2286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4189089773127281}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player Outer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
