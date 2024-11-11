@@ -19,7 +19,7 @@ namespace ENA.Services
             string day = recordingTime.Date.ToString().Split(' ')[0];
             day = day.Replace("/", "-");
 
-            return $"{profile?.UserName ?? "Guest"}_{day}_{recordingTime.Hour}_{recordingTime.Minute}";
+            return $"{profile?.UserName ?? "Guest"}_{day}_{recordingTime.Hour}_{recordingTime.Minute}_{recordingTime.Second}";
         }
 
         public static async Task SaveLog(DateTime recordingTime, ENAProfile profile, string contents)
